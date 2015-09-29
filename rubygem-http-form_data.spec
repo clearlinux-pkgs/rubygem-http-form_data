@@ -4,7 +4,7 @@
 #
 Name     : rubygem-http-form_data
 Version  : 1.0.1
-Release  : 1
+Release  : 2
 URL      : https://rubygems.org/downloads/http-form_data-1.0.1.gem
 Source0  : https://rubygems.org/downloads/http-form_data-1.0.1.gem
 Summary  : No detailed summary available
