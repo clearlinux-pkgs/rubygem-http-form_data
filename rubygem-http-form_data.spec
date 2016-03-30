@@ -4,35 +4,14 @@
 #
 Name     : rubygem-http-form_data
 Version  : 1.0.1
-Release  : 2
+Release  : 3
 URL      : https://rubygems.org/downloads/http-form_data-1.0.1.gem
 Source0  : https://rubygems.org/downloads/http-form_data-1.0.1.gem
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
 BuildRequires : ruby
-BuildRequires : rubygem-coveralls
-BuildRequires : rubygem-devise
-BuildRequires : rubygem-diff-lcs
-BuildRequires : rubygem-docile
-BuildRequires : rubygem-domain_name
-BuildRequires : rubygem-http-cookie
-BuildRequires : rubygem-mime-types
-BuildRequires : rubygem-netrc
 BuildRequires : rubygem-rdoc
-BuildRequires : rubygem-rest-client
-BuildRequires : rubygem-rspec
-BuildRequires : rubygem-rspec-core
-BuildRequires : rubygem-rspec-expectations
-BuildRequires : rubygem-rspec-mocks
-BuildRequires : rubygem-rspec-support
-BuildRequires : rubygem-simplecov
-BuildRequires : rubygem-simplecov-html
-BuildRequires : rubygem-term-ansicolor
-BuildRequires : rubygem-thor
-BuildRequires : rubygem-tins
-BuildRequires : rubygem-unf
-BuildRequires : rubygem-unf_ext
 
 %description
 # FormData
@@ -68,103 +47,34 @@ cp -pa .%{_bindir}/* \
 %{buildroot}%{_bindir}/
 fi
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
-pushd %{buildroot}%{gem_dir}/gems/http-form_data-1.0.1
-rspec -I.:lib spec/
-popd
-
 
 %files
 %defattr(-,root,root,-)
-/usr/lib64/ruby/gems/2.2.0/cache/http-form_data-1.0.1.gem
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Error/cdesc-Error.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/File/cdesc-File.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/File/filename-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/File/mime_type-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/File/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/File/size-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/File/to_s-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/File/with_io-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Multipart/Param/cdesc-Param.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Multipart/Param/coerce-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Multipart/Param/file%3f-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Multipart/Param/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Multipart/Param/size-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Multipart/Param/to_s-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Multipart/cdesc-Multipart.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Multipart/content_length-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Multipart/content_type-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Multipart/glue-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Multipart/head-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Multipart/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Multipart/tail-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Multipart/to_s-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Urlencoded/cdesc-Urlencoded.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Urlencoded/content_length-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Urlencoded/content_type-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Urlencoded/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/Urlencoded/to_s-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/cdesc-FormData.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/create-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/ensure_hash-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/FormData/multipart%3f-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/HTTP/cdesc-HTTP.ri
-/usr/lib64/ruby/gems/2.2.0/doc/http-form_data-1.0.1/ri/cache.ri
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/.gitignore
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/.rspec
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/.rubocop.yml
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/.travis.yml
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/.yardopts
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/CHANGES.md
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/Gemfile
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/Guardfile
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/LICENSE.txt
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/README.md
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/Rakefile
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/.last_run.json
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/.resultset.json
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/.resultset.json.lock
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/application.css
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/application.js
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/colorbox/border.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/colorbox/controls.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/colorbox/loading.gif
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/colorbox/loading_background.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/favicon_green.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/favicon_red.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/favicon_yellow.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/loading.gif
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/magnify.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/smoothness/images/ui-bg_flat_75_ffffff_40x100.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/smoothness/images/ui-bg_glass_65_ffffff_1x400.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/smoothness/images/ui-bg_glass_75_dadada_1x400.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/smoothness/images/ui-icons_222222_256x240.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/smoothness/images/ui-icons_2e83ff_256x240.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/smoothness/images/ui-icons_454545_256x240.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/smoothness/images/ui-icons_888888_256x240.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/assets/0.10.0/smoothness/images/ui-icons_cd0a0a_256x240.png
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/coverage/index.html
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/http-form_data.gemspec
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/lib/http/form_data.rb
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/lib/http/form_data/file.rb
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/lib/http/form_data/multipart.rb
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/lib/http/form_data/multipart/param.rb
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/lib/http/form_data/urlencoded.rb
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/lib/http/form_data/version.rb
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/spec/fixtures/expected-multipart-body.tpl
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/spec/fixtures/the-http-gem.info
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/spec/lib/http/form_data/file_spec.rb
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/spec/lib/http/form_data/multipart_spec.rb
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/spec/lib/http/form_data/urlencoded_spec.rb
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/spec/lib/http/form_data_spec.rb
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/spec/spec_helper.rb
-/usr/lib64/ruby/gems/2.2.0/gems/http-form_data-1.0.1/spec/support/fixtures_helper.rb
-/usr/lib64/ruby/gems/2.2.0/specifications/http-form_data-1.0.1.gemspec
+/usr/lib64/ruby/gems/2.3.0/cache/http-form_data-1.0.1.gem
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/.gitignore
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/.rspec
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/.rubocop.yml
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/.travis.yml
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/.yardopts
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/CHANGES.md
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/Gemfile
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/Guardfile
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/LICENSE.txt
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/README.md
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/Rakefile
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/http-form_data.gemspec
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/lib/http/form_data.rb
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/lib/http/form_data/file.rb
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/lib/http/form_data/multipart.rb
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/lib/http/form_data/multipart/param.rb
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/lib/http/form_data/urlencoded.rb
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/lib/http/form_data/version.rb
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/spec/fixtures/expected-multipart-body.tpl
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/spec/fixtures/the-http-gem.info
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/spec/lib/http/form_data/file_spec.rb
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/spec/lib/http/form_data/multipart_spec.rb
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/spec/lib/http/form_data/urlencoded_spec.rb
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/spec/lib/http/form_data_spec.rb
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/spec/spec_helper.rb
+/usr/lib64/ruby/gems/2.3.0/gems/http-form_data-1.0.1/spec/support/fixtures_helper.rb
+/usr/lib64/ruby/gems/2.3.0/specifications/http-form_data-1.0.1.gemspec
